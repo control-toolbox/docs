@@ -1,6 +1,3 @@
-using Documenter
-using MultiDocumenter
-
 clonedir = mktempdir()
 
 docs = [
