@@ -1,4 +1,5 @@
 name = "CTDocs"
+uuid = "e96cf5d4-8ab0-4eb3-9f2c-56190d89b818"
 
 [compat]
 julia = "1.8"
