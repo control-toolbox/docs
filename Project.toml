@@ -1,0 +1,4 @@
+name = "CTDocs"
+
+[compat]
+julia = "1.8"

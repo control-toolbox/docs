@@ -7,7 +7,7 @@ docs = [
     MultiDocumenter.MultiDocRef(upstream = joinpath(clonedir, "Home"),
                                        path = "optimalcontrol",
                                        name = "Home",
-                                       giturl = "https://github.com/BaptisteCbl/OptimalControl.jl.git"),
+                                       giturl = "https://github.com/control-toolbox/OptimalControl.jl.git"),
     MultiDocumenter.DropdownNav(
         "Base and Utilities",
         [
