@@ -1,5 +1,5 @@
 module CTDocs
 
-include("make.jl")
+nothing
 
 end
