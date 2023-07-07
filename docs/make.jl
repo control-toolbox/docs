@@ -58,7 +58,7 @@ outpath = mktempdir()
 MultiDocumenter.make(
     outpath,
     docs;
-    rootpath = "/OptimalControl.jl/",
+    rootpath = "/CTDocs.jl/",
     brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/",joinpath("assets","ct-crop.svg")),
 )
 
