@@ -59,7 +59,7 @@ MultiDocumenter.make(
     outpath,
     docs;
     rootpath = "/CTDocs.jl/",
-    brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/",joinpath("assets","ct-crop.svg")),
+    brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/",joinpath("src/assets","ct-crop.svg")),
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
