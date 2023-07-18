@@ -23,6 +23,12 @@ docs = [
                 name = "CTFlows",
                 giturl = "https://github.com/control-toolbox/CTFlows.jl.git",
             ),
+            MultiDocumenter.MultiDocRef(
+                upstream = joinpath(clonedir, "CTProblems"),
+                path = "ctproblems",
+                name = "CTProblems",
+                giturl = "https://github.com/control-toolbox/CTProblems.jl.git",
+            ),
         ]),
     MultiDocumenter.DropdownNav(
         "Solvers",
@@ -40,17 +46,6 @@ docs = [
                 giturl = "https://github.com/control-toolbox/CTDirectShooting.jl.git",
             ),
         ]),
-    MultiDocumenter.DropdownNav(
-        "Examples",
-        [
-            MultiDocumenter.MultiDocRef(
-                upstream = joinpath(clonedir, "CTProblems"),
-                path = "ctproblems",
-                name = "CTProblems",
-                giturl = "https://github.com/control-toolbox/CTProblems.jl.git",
-            ),
-        ]
-    ),
 ]
 
 outpath = mktempdir()
