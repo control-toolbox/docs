@@ -54,13 +54,12 @@ MultiDocumenter.make(
     outpath,
     docs;
     assets_dir = "src/assets",
-    search_engine = MultiDocumenter.SearchConfig(index_versions = ["stable",], engine = MultiDocumenter.FlexSearch),
+    search_engine = MultiDocumenter.SearchConfig(index_versions = ["stable"], engine = MultiDocumenter.FlexSearch),
     brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/",joinpath("assets","ct-crop.svg")),
-    rootpath = "/CTDocs.jl/",
+    #rootpath = "/CTDocs.jl/",
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
-run(`ls`)
 run(`git pull`)
 outbranch = "gh-pages"
 has_outbranch = true
