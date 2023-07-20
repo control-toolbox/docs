@@ -55,7 +55,7 @@ MultiDocumenter.make(
     docs;
     assets_dir = "src/assets",
     search_engine = MultiDocumenter.SearchConfig(index_versions = ["stable",], engine = MultiDocumenter.FlexSearch),
-    brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/",joinpath("assets","ct-crop.png")),
+    brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/",joinpath("assets","ct-crop.svg")),
     rootpath = "/CTDocs.jl/",
 )
 
@@ -79,7 +79,6 @@ for file in readdir(outpath)
     cp(joinpath(outpath, file), joinpath(gitroot, file))
 end
 run(`git add .`)
-run(`git commit -m 'Aggregate documentation 1'`)
 if success(`git commit -m 'Aggregate documentation'`)
     @info "Pushing updated documentation."
     if has_outbranch
