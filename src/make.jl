@@ -82,9 +82,9 @@ run(`git add .`)
 if success(`git commit -m 'Aggregate documentation'`)
     @info "Pushing updated documentation."
     if has_outbranch
-        run(`git push`)
+        run(`git push -f`)
     else
-        run(`git push -u origin $outbranch`)
+        run(`git push -f -u origin $outbranch`)
     end
     run(`git checkout main`)
 else
