@@ -79,6 +79,7 @@ for file in readdir(outpath)
 end
 run(`ls`)
 run(`git add --all`)
+run(`git commit -am 'Aggregate documentation 1'`)
 if success(`git commit -am 'Aggregate documentation'`)
     @info "Pushing updated documentation."
     if has_outbranch
