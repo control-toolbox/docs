@@ -78,7 +78,7 @@ for file in readdir(outpath)
     cp(joinpath(outpath, file), joinpath(gitroot, file))
 end
 run(`ls`)
-run(`git add .`)
+run(`git add *`)
 if success(`git commit -am 'Aggregate documentation'`)
     @info "Pushing updated documentation."
     if has_outbranch
