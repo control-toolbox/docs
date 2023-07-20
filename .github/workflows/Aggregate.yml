@@ -27,8 +27,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
-          USER: ${{ github.actor }}
-        run: |
-          git config user.name $USER 
+        run: | 
           julia --project=. src/make.jl
         

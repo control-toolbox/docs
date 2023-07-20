@@ -60,6 +60,7 @@ MultiDocumenter.make(
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
+run(`ls`)
 run(`git pull`)
 outbranch = "gh-pages"
 has_outbranch = true
@@ -77,9 +78,7 @@ end
 for file in readdir(outpath)
     cp(joinpath(outpath, file), joinpath(gitroot, file))
 end
-run(`ls`)
 run(`git add .`)
-run(`git commit -am 'Aggregate documentation 1'`)
 if success(`git commit -m 'Aggregate documentation'`)
     @info "Pushing updated documentation."
     if has_outbranch
