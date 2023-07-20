@@ -60,6 +60,7 @@ MultiDocumenter.make(
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
+run(`ls`)
 run(`git pull`)
 outbranch = "gh-pages"
 has_outbranch = true
