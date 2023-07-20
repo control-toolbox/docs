@@ -29,6 +29,6 @@ jobs:
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
           USER: ${{ github.actor }}
         run: |
-          git config user.name "${{USER}}" 
+          git config user.name $USER 
           julia --project=. src/make.jl
         
