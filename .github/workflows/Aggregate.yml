@@ -29,4 +29,5 @@ jobs:
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
         run: | 
           julia --project=. src/make.jl
+          ls
         
