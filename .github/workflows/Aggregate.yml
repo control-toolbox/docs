@@ -27,10 +27,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # If authenticating with GitHub Actions token
           DOCUMENTER_KEY: ${{ secrets.DOCUMENTER_KEY }} # If authenticating with SSH deploy key
-          USER_EMAIL: ${{github.event.pusher.email}}
           USER_NAME: ${{github.event.pusher.name}}
+          USER_EMAIL: ${{github.event.pusher.email}}
         run: | 
-          echo $USER_EMAIL
-          echo $USER_NAME
-          
+          git config user.name $USER_NAME
+          git config user.email $USER_EMAIL
+          julia --project=. src/make.jl
         
