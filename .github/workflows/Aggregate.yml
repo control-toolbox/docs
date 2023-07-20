@@ -30,7 +30,7 @@ jobs:
           USER_NAME: ${{github.event.pusher.name}}
           USER_EMAIL: ${{github.event.pusher.email}}
         run: | 
-          git config user.name $USER_NAME
-          git config user.email $USER_EMAIL
+          git config user.name "$USER_NAME"
+          git config user.email "$USER_EMAIL"
           julia --project=. src/make.jl
         
