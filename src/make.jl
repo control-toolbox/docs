@@ -54,7 +54,7 @@ MultiDocumenter.make(
     outpath,
     docs;
     assets_dir = "src/assets",
-    search_engine = MultiDocumenter.SearchConfig(index_versions = ["stable"], engine = MultiDocumenter.FlexSearch),
+    search_engine = MultiDocumenter.SearchConfig(index_versions = ["dev"], engine = MultiDocumenter.FlexSearch),
     brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/",joinpath("assets","ct-crop.svg")),
     #rootpath = "/CTDocs.jl/",
 )
