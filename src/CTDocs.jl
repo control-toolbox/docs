@@ -1,5 +1,0 @@
-module CTDocs
-
-nothing
-
-end
