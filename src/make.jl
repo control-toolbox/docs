@@ -4,48 +4,42 @@ using MultiDocumenter
 clonedir = mktempdir()
 
 docs = [
-    MultiDocumenter.MultiDocRef(upstream = joinpath(clonedir, "Home"),
-                                path = "optimalcontrol",
-                                name = "Home",
-                                giturl = "https://github.com/control-toolbox/OptimalControl.jl.git"),
-    MultiDocumenter.DropdownNav(
-        "Base and Utilities",
-        [
-            MultiDocumenter.MultiDocRef(
-                upstream = joinpath(clonedir, "CTBase"),
-                path = "ctbase",
-                name = "CTBase",
-                giturl = "https://github.com/control-toolbox/CTBase.jl.git",
-            ),
-            MultiDocumenter.MultiDocRef(
-                upstream = joinpath(clonedir, "CTFlows"),
-                path = "ctflows",
-                name = "CTFlows",
-                giturl = "https://github.com/control-toolbox/CTFlows.jl.git",
-            ),
-            MultiDocumenter.MultiDocRef(
-                upstream = joinpath(clonedir, "CTProblems"),
-                path = "ctproblems",
-                name = "CTProblems",
-                giturl = "https://github.com/control-toolbox/CTProblems.jl.git",
-            ),
-        ]),
-    MultiDocumenter.DropdownNav(
-        "Solvers",
-        [
-            MultiDocumenter.MultiDocRef(
-                upstream = joinpath(clonedir, "CTDirect"),
-                path = "ctdirect",
-                name = "CTDirect",
-                giturl = "https://github.com/control-toolbox/CTDirect.jl.git",
-            ),
-            MultiDocumenter.MultiDocRef(
-                upstream = joinpath(clonedir, "CTDirectShooting"),
-                path = "ctdirectshooting",
-                name = "CTDirectShooting",
-                giturl = "https://github.com/control-toolbox/CTDirectShooting.jl.git",
-            ),
-        ]),
+    MultiDocumenter.MultiDocRef(
+        upstream = joinpath(clonedir, "Home"),
+        path     = "optimalcontrol",
+        name     = "OptimalControl",
+        giturl   = "https://github.com/control-toolbox/OptimalControl.jl.git",
+    ),
+    MultiDocumenter.MultiDocRef(
+        upstream = joinpath(clonedir, "CTProblems"),
+        path     = "ctproblems",
+        name     = "CTProblems",
+        giturl   = "https://github.com/control-toolbox/CTProblems.jl.git",
+    ),
+    MultiDocumenter.MultiDocRef(
+        upstream = joinpath(clonedir, "CTFlows"),
+        path     = "ctflows",
+        name     = "CTFlows",
+        giturl   = "https://github.com/control-toolbox/CTFlows.jl.git",
+    ),
+    MultiDocumenter.MultiDocRef(
+        upstream = joinpath(clonedir, "CTDirect"),
+        path     = "ctdirect",
+        name     = "CTDirect",
+        giturl   = "https://github.com/control-toolbox/CTDirect.jl.git",
+    ),
+    MultiDocumenter.MultiDocRef(
+        upstream = joinpath(clonedir, "CTDirectShooting"),
+        path     = "ctdirectshooting",
+        name     = "CTDirectShooting",
+        giturl   = "https://github.com/control-toolbox/CTDirectShooting.jl.git",
+    ),
+    MultiDocumenter.MultiDocRef(
+        upstream = joinpath(clonedir, "CTBase"),
+        path     = "ctbase",
+        name     = "CTBase",
+        giturl   = "https://github.com/control-toolbox/CTBase.jl.git",
+    ),
 ]
 
 outpath = mktempdir()
@@ -53,10 +47,10 @@ outpath = mktempdir()
 MultiDocumenter.make(
     outpath,
     docs;
-    assets_dir = "src/assets",
+    assets_dir    = "src/assets",
     search_engine = MultiDocumenter.SearchConfig(index_versions = ["stable"], engine = MultiDocumenter.FlexSearch),
-    brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/",joinpath("assets","ct-crop.svg")),
-    #rootpath = "/CTDocs.jl/",
+    brand_image   = MultiDocumenter.BrandImage("https://control-toolbox.org/", joinpath("assets","ct-crop.svg")),
+#    rootpath      = "docs",
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
