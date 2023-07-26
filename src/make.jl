@@ -23,12 +23,6 @@ docs = [
         giturl   = "https://github.com/control-toolbox/CTDirect.jl.git",
     ),
     MultiDocumenter.MultiDocRef(
-        upstream = joinpath(clonedir, "CTDirectShooting"),
-        path     = "ctdirectshooting",
-        name     = "CTDirectShooting",
-        giturl   = "https://github.com/control-toolbox/CTDirectShooting.jl.git",
-    ),
-    MultiDocumenter.MultiDocRef(
         upstream = joinpath(clonedir, "CTFlows"),
         path     = "ctflows",
         name     = "CTFlows",
