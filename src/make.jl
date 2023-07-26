@@ -11,16 +11,10 @@ docs = [
         giturl   = "https://github.com/control-toolbox/OptimalControl.jl.git",
     ),
     MultiDocumenter.MultiDocRef(
-        upstream = joinpath(clonedir, "CTProblems"),
-        path     = "ctproblems",
-        name     = "CTProblems",
-        giturl   = "https://github.com/control-toolbox/CTProblems.jl.git",
-    ),
-    MultiDocumenter.MultiDocRef(
-        upstream = joinpath(clonedir, "CTFlows"),
-        path     = "ctflows",
-        name     = "CTFlows",
-        giturl   = "https://github.com/control-toolbox/CTFlows.jl.git",
+        upstream = joinpath(clonedir, "CTBase"),
+        path     = "ctbase",
+        name     = "CTBase",
+        giturl   = "https://github.com/control-toolbox/CTBase.jl.git",
     ),
     MultiDocumenter.MultiDocRef(
         upstream = joinpath(clonedir, "CTDirect"),
@@ -35,10 +29,16 @@ docs = [
         giturl   = "https://github.com/control-toolbox/CTDirectShooting.jl.git",
     ),
     MultiDocumenter.MultiDocRef(
-        upstream = joinpath(clonedir, "CTBase"),
-        path     = "ctbase",
-        name     = "CTBase",
-        giturl   = "https://github.com/control-toolbox/CTBase.jl.git",
+        upstream = joinpath(clonedir, "CTFlows"),
+        path     = "ctflows",
+        name     = "CTFlows",
+        giturl   = "https://github.com/control-toolbox/CTFlows.jl.git",
+    ),
+    MultiDocumenter.MultiDocRef(
+        upstream = joinpath(clonedir, "CTProblems"),
+        path     = "ctproblems",
+        name     = "CTProblems",
+        giturl   = "https://github.com/control-toolbox/CTProblems.jl.git",
     ),
 ]
 
@@ -50,7 +50,7 @@ MultiDocumenter.make(
     assets_dir    = "src/assets",
     search_engine = MultiDocumenter.SearchConfig(index_versions = ["stable"], engine = MultiDocumenter.FlexSearch),
     brand_image   = MultiDocumenter.BrandImage("https://control-toolbox.org/", joinpath("assets","ct-crop.svg")),
-#    rootpath      = "docs",
+    rootpath      = "docs",
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
