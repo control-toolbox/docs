@@ -50,7 +50,7 @@ MultiDocumenter.make(
     assets_dir    = "src/assets",
     search_engine = MultiDocumenter.SearchConfig(index_versions = ["stable"], engine = MultiDocumenter.FlexSearch),
     brand_image   = MultiDocumenter.BrandImage("https://control-toolbox.org/", joinpath("assets","ct-crop.svg")),
-    rootpath      = "docs",
+    #rootpath      = "CTDocs.jl",
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
