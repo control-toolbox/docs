@@ -5,7 +5,7 @@ clonedir = mktempdir()
 
 docs = [
     MultiDocumenter.MultiDocRef(
-        upstream = joinpath(clonedir, "Home"),
+        upstream = joinpath(clonedir, "OptimalControl"),
         path     = "optimalcontrol",
         name     = "OptimalControl",
         giturl   = "https://github.com/control-toolbox/OptimalControl.jl.git",
