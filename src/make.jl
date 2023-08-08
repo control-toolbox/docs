@@ -52,6 +52,13 @@ MultiDocumenter.make(outpath, docs;
                          gtag('js', new Date());
                          gtag('config', 'G-J27VDFHJW2');
                          """),
+                         Docs.HTML("""
+                         var favicon = document.createElement('link');
+                         favicon.type = 'image/x-icon';
+                         favicon.rel = 'icon';
+                         favicon.href = '../../../assets/img/ct-logo.svg';
+                         document.head.appendChild(favicon);
+                         """),
                      ],
                      brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/", 
                                                               joinpath("assets",
