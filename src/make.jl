@@ -38,13 +38,24 @@ docs = [
 
 outpath = mktempdir()
 
-MultiDocumenter.make(
-    outpath,
-    docs;
-    assets_dir    = "src/assets",
-    search_engine = MultiDocumenter.SearchConfig(index_versions = ["stable"], engine = MultiDocumenter.FlexSearch),
-    brand_image   = MultiDocumenter.BrandImage("https://control-toolbox.org/", joinpath("assets","ct-crop.svg")),
-    #rootpath      = "CTDocs.jl",
+MultiDocumenter.make(outpath, docs;
+                     assets_dir    = "src/assets",
+                     search_engine = MultiDocumenter.SearchConfig(index_versions = [
+                                                                      "stable",
+                                                                  ],
+                                                                  engine = MultiDocumenter.FlexSearch),
+                     custom_scripts = [
+                         "https://www.googletagmanager.com/gtag/js?id=G-J27VDFHJW2",
+                         Docs.HTML("""
+                         window.dataLayer = window.dataLayer || [];
+                         function gtag(){dataLayer.push(arguments);}
+                         gtag('js', new Date());
+                         gtag('config', 'G-J27VDFHJW2');
+                         """),
+                     ],
+                     brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/", 
+                                                              joinpath("assets",
+                                                                       "ct-crop.svg")),
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
