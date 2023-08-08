@@ -56,6 +56,9 @@ MultiDocumenter.make(outpath, docs;
                      brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/", 
                                                               joinpath("assets",
                                                                        "ct-crop.svg")),
+                     custom_stylesheets = [
+                         "https://control-toolbox.org/assets/css/nav.css",
+                     ],
 )
 
 gitroot = normpath(joinpath(@__DIR__, ".."))
