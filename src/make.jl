@@ -45,6 +45,7 @@ MultiDocumenter.make(outpath, docs;
                                                                   ],
                                                                   engine = MultiDocumenter.FlexSearch),
                      custom_scripts = [
+                         """<link rel="icon" type="image/x-icon" href="../../../assets/img/ct-logo.svg">""",
                          "https://www.googletagmanager.com/gtag/js?id=G-J27VDFHJW2",
                          Docs.HTML("""
                          window.dataLayer = window.dataLayer || [];
