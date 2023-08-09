@@ -64,7 +64,7 @@ MultiDocumenter.make(outpath, docs;
                                                               joinpath("assets",
                                                                        "ct-crop.svg")),
                      custom_stylesheets = [
-                         "https://control-toolbox.org/assets/css/nav.css",
+                         "https://control-toolbox.org/assets/css/docs.css",
                      ],
 )
 
