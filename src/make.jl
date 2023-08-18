@@ -46,7 +46,19 @@ MultiDocumenter.make(outpath, docs;
                                                                   engine = MultiDocumenter.FlexSearch),
                      custom_scripts = [
                          "https://www.googletagmanager.com/gtag/js?id=G-J27VDFHJW2",
-                         "https://control-toolbox.org/assets/js/documentation.js",
+                         Docs.HTML("""
+                         window.dataLayer = window.dataLayer || [];
+                         function gtag(){dataLayer.push(arguments);}
+                         gtag('js', new Date());
+                         gtag('config', 'G-J27VDFHJW2');
+                         """),
+                         Docs.HTML("""
+                         var favicon = document.createElement('link');
+                         favicon.type = 'image/x-icon';
+                         favicon.rel = 'icon';
+                         favicon.href = '../../../assets/img/ct-logo.svg';
+                         document.head.appendChild(favicon);
+                         """),
                      ],
                      brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/", 
                                                               joinpath("assets",
