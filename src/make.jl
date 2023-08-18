@@ -40,13 +40,13 @@ outpath = mktempdir()
 
 MultiDocumenter.make(outpath, docs;
                      assets_dir    = "src/assets",
-                     search_engine = false, # MultiDocumenter.SearchConfig(index_versions = [
-                                            #                          "stable",
-                                            #                      ],
-                                            #                      engine = MultiDocumenter.FlexSearch),
+                     search_engine = MultiDocumenter.SearchConfig(index_versions = [
+                                                                      "stable",
+                                                                  ],
+                                                                  engine = MultiDocumenter.FlexSearch),
                      custom_scripts = [
                          "https://www.googletagmanager.com/gtag/js?id=G-J27VDFHJW2",
-                         "https://control-toolbox.org/assets/js/documentation.js",
+                         #"https://control-toolbox.org/assets/js/documentation.js",
                      ],
                      brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/", 
                                                               joinpath("assets",
