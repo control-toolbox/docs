@@ -46,7 +46,8 @@ MultiDocumenter.make(outpath, docs;
                                                                   engine = MultiDocumenter.FlexSearch),
                      custom_scripts = [
                          "https://www.googletagmanager.com/gtag/js?id=G-J27VDFHJW2",
-                         #"https://control-toolbox.org/assets/js/documentation.js",
+                         "https://control-toolbox.org/assets/js/documentation.js",
+                         Docs.HTML(""" """),
                      ],
                      brand_image = MultiDocumenter.BrandImage("https://control-toolbox.org/", 
                                                               joinpath("assets",
