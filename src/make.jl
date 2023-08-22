@@ -1,4 +1,4 @@
-using Documenter
+using Documenter #
 using MultiDocumenter
 
 clonedir = mktempdir()
